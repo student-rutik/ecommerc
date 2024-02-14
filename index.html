@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #toTop {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 998;
+  background: #b7bcc6;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+}
+#up{
+    font-weight: 900;
+    font-size: 40px;
+}
+
+    </style>
+  </head>
+  <body>
+
+   
+
+<div id="toTop">
+    <i class="fa-solid fa-arrow-up" id="up"></i>
+</div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Fashion.com</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Blog
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Blog Details</a></li>
+              
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-disabled="true">Services</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<div class="container mt-5 mb-5">
+    <div class="row  justify-content-evenly mb-4">
+        <h2 class="text-center">Male Products</h2>
+        <div class="col-md-3 mb-3">
+           <a href="shop.html">
+            <img src="https://img.freepik.com/free-photo/portrait-handsome-smiling-hipster-lumbersexual-businessman-model-wearing-casual-jeans-shirt-clothes_158538-17403.jpg?size=626&ext=jpg&ga=GA1.1.1842581937.1703348153&semt=ais" alt="" class="img-fluid" >
+           </a>
+        </div>
+        <div class="col-md-3 mb-3" >
+           <a href="shop.html">
+            <img src="https://img.freepik.com/free-photo/portrait-handsome-young-businessman_158595-252.jpg?size=626&ext=jpg&ga=GA1.1.1842581937.1703348153&semt=ais" alt="" class="img-fluid">
+           </a>
+        </div>
+        <div class="col-md-3 mb-3">
+            <a href="shop.html"><img src="https://img.freepik.com/free-photo/portrait-fashionable-young-dark-haired-male-with-stubble-having-serious-look-turning-head-back-against-blank-yellow-wall-with-copy-space-your-text-promotional-information_343059-4599.jpg?size=626&ext=jpg&ga=GA1.1.1842581937.1703348153&semt=ais" alt="" class="img-fluid"></a>
+        </div>
+    </div>
+
+    <div class="row  justify-content-evenly">
+        <h2 class="text-center">FeMale Products</h2>
+        <div class="col-md-3 mb-3">
+            <a href="shop.html">
+                <img src="https://img.freepik.com/free-photo/portrait-confident-brunette-woman-posing-studio_176420-29695.jpg?size=626&ext=jpg&ga=GA1.1.1842581937.1703348153&semt=ais" alt="" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-md-3 mb-3" >
+            <a href="shop.html"><img src="https://img.freepik.com/free-photo/joyful-woman-with-hand-her-pockets_23-2147653650.jpg?size=626&ext=jpg&ga=GA1.1.1842581937.1703348153&semt=ais" alt="" class="img-fluid"></a>
+        </div>
+        <div class="col-md-3 mb-3">
+            <a href="shop.html"><img src="https://img.freepik.com/free-photo/young-girl-with-hands-front-her-floral-sweater-jeans-looking-cute-front-view_176474-106190.jpg?size=626&ext=jpg&ga=GA1.1.1842581937.1703348153&semt=ais" alt="" class="img-fluid"></a>
+        </div>
+    </div>
+</div>
+
+  <div class="wrapper">
+    <div id="search-container">
+       <input type="search"  id="search-input" placeholder="search product name here...">
+
+       <button id="search">Search</button>
+    </div>
+
+    <div id="buttons">
+        <button class="button-value"  onclick="filterProduct('all')">All</button>
+
+        <button class="button-value" onclick="filterProduct('topwear')">Topwear</button>
+        <button class="button-value" onclick="filterProduct('bottomwear')">Bottomwear</button>
+        <button class="button-value" onclick="filterProduct('jacket')">Jacket</button>
+        <button class="button-value" onclick="filterProduct('watch')">Watch</button>
+    </div>
+
+    <div id="products"></div>
+</div>
+
+<div class="container-fluid mb-5">
+    <h1 class="text-center">Contact form</h1>
+    <div class="row justify-content-evenly p-5" style="background-color: rgb(250, 246, 241) rgb(15, 14, 13);">
+        <div class="col-md-5">
+            <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">Address</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2">Address 2</label>
+                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                   
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+              </form>
+        </div>
+        <div class="col-md-5">
+            <h3>Address</h3>
+            <p>ulhasngar-4 , mumbai maharashtra.. <br>
+                <i class="fa-solid fa-phone-volume"></i>     9284661747
+            </p>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.49715450489!2d72.9239755750287!3d19.129703382086028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7bf050c97e9%3A0x7b9d1bab6b75dd93!2sTechnoPurple%20Tracking!5e0!3m2!1sen!2sin!4v1707766449131!5m2!1sen!2sin" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="row justify-content-evenly" >
+        <div class="col-md-10">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Who takes care of shipping?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        This depends on which fulfillment option you use to deliver your products. With FBA & Easy Ship, fashion will handle the delivery of products to customers (and returns). When you choose Self-ship, you will deliver the products yourself where you can use third party courier services or your own delivery associates (for Local Shops)
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What is Sell on fashion or SOA?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Sell on fashion is a program that enables you to list and sell your product on fashion.in.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Who takes care of packaging? If I take care of packaging, where do I get the packaging material from?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Packaging depends on your which fulfillment option you use to deliver your products. With FBA, we take care of packaging your product in a delivery box. With Easy Ship and Self Ship, you will have to take care of packaging, and you can purchase Amazon packaging material.
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container mt-4  mb-5">
+    <h2 class="text-center">Testimonials</h2>
+    <div class="row justify-content-evenly ">
+        <div class="col-md-5">
+            <iframe width="460" height="315" src="https://www.youtube.com/embed/3XHimGkiNYM?si=a1yIcZt-AuNVmABz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-5">
+            <iframe width="460" height="315" src="https://www.youtube.com/embed/aghcWWaSJM4?si=IsYz_aUaM75iKWAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row  justify-content-evenly  bg-secondary p-5 text-white" >
+        <div class="col-md-3  mb-3" >
+            <p>Why pay more for fast delivery every time you need an item quickly? As a Prime member, get unlimited FREE Same-Day, 1-Day & 2-Day Delivery on eligible items from India’s largest online store, to over a hundred cities. Prime items that are not eligible for free Same-Day or 1-Day Delivery to your location.</p>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <div class="col-md-3">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Service</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul>
+                <li>Web Development</li>
+                <li>Search Engine Optimization</li>
+                <li>App Development</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="text-center">@Created By Rutik Alhat</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="js.js"></script>
+    
+  </body>
+</html>

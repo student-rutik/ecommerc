@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    
+    <style>
+        *{cursor: pointer;}
+        #toTop {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 998;
+  background: #b7bcc6;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+}
+#up{
+    font-weight: 900;
+    font-size: 40px;
+}
+img {
+    width: 100%!important;
+    height: 30rem;
+}
+
+
+.image-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .image-container img {
+        width: auto;
+        height: auto;
+        transition: transform 0.5s;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: height 0.5s;
+    }
+
+    .image-container:hover .overlay {
+        height: 100%;
+    }
+
+    .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .btn-more {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    </style>
+  </head>
+  <body>
+
+   
+
+    <div id="toTop">
+        <i class="fa-solid fa-arrow-up" id="up"></i>
+    </div>
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Fashion.com</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Blog
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Blog Details</a></li>
+              
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-disabled="true">Services</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+ <img src="https://img.freepik.com/free-photo/stylish-handsome-indian-man-tshirt-pastel-wall_496169-1571.jpg?size=626&ext=jpg&ga=GA1.1.1842581937.1703348153&semt=sph" alt="" >
+ 
+ <div class="container">
+    <div class="row justify-content-evenly mt-5 mb-5" >
+        <div class="col-md-3 image-container mb-3">
+            <img src="https://img.freepik.com/free-photo/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer_273609-16320.jpg?size=626&ext=jpg&ga=GA1.1.1842581937.1703348153&semt=sph" alt="">
+            <div class="overlay">
+                <div class="overlay-text">Fashion</div>
+                <button type="button" class="btn btn-primary btn-more">More</button>
+            </div>
+        </div>
+        
+        <div class="col-md-3 image-container mb-3">
+            <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?size=626&ext=jpg&ga=GA1.1.1842581937.1703348153&semt=sph" alt="">
+            <div class="overlay">
+                <div class="overlay-text">Fashion</div>
+                <button type="button" class="btn btn-primary btn-more">More</button>
+            </div>
+        </div>
+        
+        <div class="col-md-3 image-container mb-3">
+            <img src="https://img.freepik.com/free-photo/cheerful-indian-businessman-smiling-closeup-portrait-jobs-career-campaign_53876-129417.jpg?size=626&ext=jpg&ga=GA1.1.1842581937.1703348153&semt=sph" alt="">
+            <div class="overlay">
+                <div class="overlay-text">Fashion</div>
+                <button type="button" class="btn btn-primary btn-more">More</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-evenly mt-5 mb-5" >
+        <div class="col-md-3 image-container mb-3">
+            <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?size=626&ext=jpg&ga=GA1.1.1842581937.1703348153&semt=sph" alt="">
+            <div class="overlay">
+                <div class="overlay-text">Fashion</div>
+                <button type="button" class="btn btn-primary btn-more">More</button>
+            </div>
+        </div>
+        
+        <div class="col-md-3 image-container mb-3">
+            <img src="https://img.freepik.com/free-photo/surprised-happy-girl-pointing-left-recommend-product-advertisement-make-okay-gesture_176420-20191.jpg?size=626&ext=jpg&ga=GA1.1.1842581937.1703348153&semt=sph" alt="">
+            <div class="overlay">
+                <div class="overlay-text">Fashion</div>
+                <button type="button" class="btn btn-primary btn-more">More</button>
+            </div>
+        </div>
+        
+        <div class="col-md-3 image-container mb-3">
+            <img src="https://img.freepik.com/free-photo/beautiful-curly-girl-pointing-finger_176420-168.jpg?size=626&ext=jpg&ga=GA1.1.1842581937.1703348153&semt=sph" alt="">
+            <div class="overlay">
+                <div class="overlay-text">Fashion</div>
+                <button type="button" class="btn btn-primary btn-more">More</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4  mb-5">
+    <h2 class="text-center">Testimonials</h2>
+    <div class="row justify-content-evenly ">
+        <div class="col-md-5">
+            <iframe width="460" height="315" src="https://www.youtube.com/embed/3XHimGkiNYM?si=a1yIcZt-AuNVmABz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-5">
+            <iframe width="460" height="315" src="https://www.youtube.com/embed/aghcWWaSJM4?si=IsYz_aUaM75iKWAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row  justify-content-evenly  bg-secondary p-5 text-white" >
+        <div class="col-md-3  mb-3" >
+            <p>Why pay more for fast delivery every time you need an item quickly? As a Prime member, get unlimited FREE Same-Day, 1-Day & 2-Day Delivery on eligible items from India’s largest online store, to over a hundred cities. Prime items that are not eligible for free Same-Day or 1-Day Delivery to your location.</p>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <div class="col-md-3">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Service</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <ul>
+                <li>Web Development</li>
+                <li>Search Engine Optimization</li>
+                <li>App Development</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="text-center">@Created By Rutik Alhat</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="js.js"></script>
+    
+  </body>
+</html>
